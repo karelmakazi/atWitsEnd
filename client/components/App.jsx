@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import categoryContext from '../context/categoryContext.js'
 
 import Category from './Category'
+import Quiz from './Quiz'
 
 function App(){
 
@@ -13,6 +14,9 @@ const [selectedCategory, setSelectedCategory] = React.useState({catName: null, c
       <categoryContext.Provider value={{selectedCategory, setSelectedCategory}}>
         <Route exact path='/'>
           <Category setSelectedCategory={setSelectedCategory}/>
+        </Route>
+        <Route path='/quiz'>
+          <Quiz category={selectedCategory}/>
         </Route>
       </categoryContext.Provider>
     </div>
