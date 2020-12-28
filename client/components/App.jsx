@@ -1,30 +1,20 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
+import categoryContext from '../context/categoryContext.js'
+
+import Category from './Category'
 
 function App(){
 
-  const categoryList = [
-    {catName: 'General Knowledge', catNumber: 9},
-    {catName: 'History', catNumber: 23}, 
-    {catName: 'Science & Nature', catNumber: 17}, 
-    {catName: 'Geography', catNumber: 22},
-    {catName: 'Animals', catNumber: 27}, 
-    {catName: 'Film', catNumber: 11}]
+const [selectedCategory, setSelectedCategory] = React.useState({catName: null, catNumber: null})
 
-
-  
   return(
     <div className=''>
-      <div className=''>
-        <h1> Quiz 2000</h1>
-        <h3>Welcome to Quiz 2000 - 
-          please select your category from the options below.</h3>
-      </div>
-      <div className=''>
-        {categoryList.map((category, index)=> {
-           return <h2 key={index}>{category.catName}</h2> 
-        })}
-      </div>
-
+      <categoryContext.Provider value={{selectedCategory, setSelectedCategory}}>
+        <Route exact path='/'>
+          <Category setSelectedCategory={setSelectedCategory}/>
+        </Route>
+      </categoryContext.Provider>
     </div>
   )
 }
