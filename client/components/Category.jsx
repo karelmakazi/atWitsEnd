@@ -5,7 +5,6 @@ import categoryContext from '../context/categoryContext'
 import categoryList from '../data/categoryList'
 
 function Category(){
-
   const categorySelection = useContext(categoryContext)
 
   const clickHandler = (selected)=> {
