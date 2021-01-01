@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { getQuestions } from '../apis/questions'
 
 import Answer from './Answer'
@@ -28,7 +29,8 @@ function Quiz({category}){
         <h1>{category.catName}</h1>
         <h3>Score: {score}</h3>
       </div>
-      <div className=''>
+
+      {questionIndex < 20 && <div className=''>
         <h3>{questionList[questionIndex].question}</h3>
         {questionList != 'wait' && questionList[questionIndex].answerArray.map((answer, index)=> {
           return <Answer 
@@ -38,7 +40,15 @@ function Quiz({category}){
             setQuestionIndex={setQuestionIndex}
             setAnswer={setAnswer}  
             />})}
-      </div>
+      </div>}
+
+      {questionIndex === 20 && <div className=''>
+        <h3>You have completed the quiz with a score of {score}</h3>
+        <Link to={'/'}>Home</Link>
+      </div>} 
+
+
+
     </div>
   )
 }
