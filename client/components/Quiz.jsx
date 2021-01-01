@@ -21,7 +21,6 @@ function Quiz({category}){
     answerStatus ? setScore(score + 1) : setScore(score)
   }, [questionIndex])
 
-  questionList != 'wait' && console.log(questionList);
 
   return(
     <div className=''>
@@ -40,7 +39,6 @@ function Quiz({category}){
             setAnswer={setAnswer}  
             />})}
       </div>
-        
     </div>
   )
 }
