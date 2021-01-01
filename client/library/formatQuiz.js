@@ -1,6 +1,7 @@
 export default function cleanQuestions(questions){
-  let cleanedQuestions = questions.map((question)=> {
+  let cleanedQuestions = questions.map((question, index)=> {
     return { 
+      questionNumber: index,
       question: decodeHTML(question.question),
       answerArray: combineAnswers(question.incorrect_answers, question.correct_answer)
     }
