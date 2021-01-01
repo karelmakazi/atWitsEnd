@@ -16,6 +16,10 @@ function Quiz({category}){
     .then(result => setQuestionList(result))
   }, [] )
 
+  useEffect(()=>{
+    console.log(answerStatus);
+    answerStatus ? setScore(score + 1) : setScore(score)
+  }, [questionIndex])
 
   questionList != 'wait' && console.log(questionList);
 
