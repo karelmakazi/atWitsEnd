@@ -8,7 +8,7 @@ function Answer({answer, setAnswer, questionIndex, setQuestionIndex}) {
   }
   
   return(
-    <div className='answer-hstack__button'>
+    <div className='answer-hstack__button-card'>
       <button onClick={()=> processAnswer()}>{answer.answer}</button>
     </div>
     )
