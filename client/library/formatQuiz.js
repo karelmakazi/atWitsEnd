@@ -1,4 +1,4 @@
-export default function cleanQuestions(questions){
+export function cleanQuestions(questions){
   let cleanedQuestions = questions.map((question, index)=> {
     return { 
       questionNumber: index,
@@ -10,14 +10,14 @@ export default function cleanQuestions(questions){
 }
 
 //Remove HTML entities from API response text
-function decodeHTML(html) {
+export function decodeHTML(html) {
   var txt = document.createElement('textarea');
   txt.innerHTML = html;
   return txt.value;
 }
 
 //Mix correct answer into answer array for display
-function combineAnswers(incorrect, correct){
+export function combineAnswers(incorrect, correct){
   let mixedAnswerArray = []
   
   let answerArray = [
