@@ -24,32 +24,34 @@ function Quiz({category}){
 
 
   return(
-    <div className=''>
-      <div className=''>
+    <>
+      <div className='quiz-header'>
         <h1>{category.catName}</h1>
         <h3>Score: {score}</h3>
       </div>
 
-      {questionIndex < 20 && <div className=''>
+      {questionIndex < 20 && <div className='quiz-stack'>
         <h3>{questionList[questionIndex].question}</h3>
         {questionList != 'wait' && questionList[questionIndex].answerArray.map((answer, index)=> {
-          return <Answer 
+          return <div className='quiz-stack__answer-hstack'>
+          <Answer 
             key={index}
             questionIndex={questionIndex} 
             answer={answer}
             setQuestionIndex={setQuestionIndex}
             setAnswer={setAnswer}  
-            />})}
+            />
+            </div>})}
       </div>}
 
-      {questionIndex === 20 && <div className=''>
+      {questionIndex === 20 && <div className='quiz-report'>
         <h3>You have completed the quiz with a score of {score}</h3>
         <Link to={'/'}>Home</Link>
       </div>} 
 
 
 
-    </div>
+    </>
   )
 }
 

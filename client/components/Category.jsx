@@ -15,21 +15,20 @@ function Category(){
   
   return(
     <div className=''>
-      <div className=''>
+      <div className='category-header'>
         <h1> Quiz 2000</h1>
         <h3>Welcome to Quiz 2000 - 
-          please select your category from the options below.</h3>
+            please select your category from the options below.</h3>
       </div>
-      <div className=''>
+      <div className='category-hstack'>
         {categoryList.map((category, index)=> {
-           return <button key={index} 
+           return <button className='category-hstack__button'
+           key={index} 
            onClick={()=> clickHandler(category)}>
            <Link to={'/quiz'}>{category.catName}</Link>
            </button> 
         })}
       </div>
-      
-      
     </div>
   )
 }

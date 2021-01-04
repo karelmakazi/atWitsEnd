@@ -10,7 +10,7 @@ function App(){
 const [selectedCategory, setSelectedCategory] = React.useState({catName: null, catNumber: null})
 
   return(
-    <div className=''>
+    <div className='wrapper'>
       <categoryContext.Provider value={{selectedCategory, setSelectedCategory}}>
         <Route exact path='/'>
           <Category setSelectedCategory={setSelectedCategory}/>
