@@ -1,5 +1,5 @@
 import * as format from './formatQuiz'
-import testQuestions from './testData'
+import testQuestions from '../data/testData'
 
 //HTML entity sample test
 const questionText = 'The Mexican Beer &quot;Corona&quot; is what type of beer?'
