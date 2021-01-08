@@ -34,14 +34,14 @@ function Quiz({category}){
         <h3>{questionList[questionIndex].question}</h3>
         {questionList != 'wait' && questionList[questionIndex].answerArray.map((answer, index)=> {
           return <div className='quiz-stack__answer-hstack'>
-          <Answer 
-            key={index}
-            questionIndex={questionIndex} 
-            answer={answer}
-            setQuestionIndex={setQuestionIndex}
-            setAnswer={setAnswer}  
-            />
-            </div>})}
+            <Answer
+              key={index}
+              questionIndex={questionIndex}
+              answer={answer}
+              setQuestionIndex={setQuestionIndex}
+              setAnswer={setAnswer} />
+          </div>
+        })}
       </div>}
 
       {questionIndex === 20 && <div className='quiz-report'>

@@ -1,0 +1,22 @@
+body {
+  background-color: beige;
+  padding: 0 8vw 0 8vw;
+}
+
+.wrapper {
+  background-color: rgb(124, 88, 58);
+  height: 100vh;
+  padding: 0 4vw 0 4vw;
+  display: grid;
+  // align-items: center;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  // grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  grid-template-rows: auto;
+  // grid-template-areas: 
+  //   "banner banner banner banner"
+  //   ". main main ."
+  //   ;
+}
+

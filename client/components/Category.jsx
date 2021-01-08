@@ -17,10 +17,9 @@ function Category() {
   return (
     <>
       <div className="category-header">
-        <h1>Quiz 2000</h1>
+        <h1>Curious</h1>
         <h3>
-          Welcome to Quiz 2000 - please select your category from the options
-          below.
+          Welcome to Curious - please select your category from the options below.
         </h3>
       </div>
       <div className="category-hstack">
