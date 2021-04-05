@@ -5,10 +5,10 @@ import categoryContext from '../context/categoryContext.js'
 import Category from './Category'
 import Quiz from './Quiz'
 
-function App() {
+function App () {
   const [selectedCategory, setSelectedCategory] = React.useState({
     catName: null,
-    catNumber: null,
+    catNumber: null
   })
 
   return (

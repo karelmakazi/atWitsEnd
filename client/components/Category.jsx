@@ -28,7 +28,9 @@ function Category() {
           <h1 className="font-black uppercase text-6xl md:text-8xl tracking-tight text-orangeMid mb-4 md:mb-0">
             Curious
           </h1>
-          <h3 className=" font-semibold tracking-tight text-xl whitespace-pre md:whitespace-normal md:text-2xl text-orangeLight">{greetingText}</h3>
+          <h3 className=" font-semibold tracking-tight text-xl whitespace-pre md:whitespace-normal md:text-2xl text-orangeLight">
+            {greetingText}
+          </h3>
         </div>
         <div className="grid grid-cols-2 gap-4 h-4/6 p-7">
           {categoryList.map((category, index) => {
