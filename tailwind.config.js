@@ -11,12 +11,17 @@ module.exports = {
         tealMid: '#40736E',
         orangeStrong: '#BF452A',
         orangeMid: '#F26835',
-        orangeLight: '#F28444'
-      },
-    },
+        orangeLight: '#F28444',
+        animals: '#012340',
+        books: '#026773',
+        earth: '#03A6A6',
+        history: '#3E5902',
+        science: '#888C03'
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }

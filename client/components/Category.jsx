@@ -19,11 +19,7 @@ function Category() {
 
   return (
     <>
-      <div className="flex h-1/6 m-auto w-50">
-        <div className="h-full w-20 box-content bg-tealMid border-r-8 border-tealStrong"></div>
-        <div className="h-full w-20 bg-tealMid"></div>
-      </div>
-      <div className="flex flex-col m-auto w-3/4 h-4/6 p-7 rounded-lg border-4 border-orangeMid shadow-lg bg-white ">
+      <div className="flex flex-col my-auto m-auto w-3/4 h-4/6 p-7 rounded-lg border-4 border-orangeMid shadow-lg bg-black ">
         <div className="text-center h-2/4  border-b-0 md:border-b-2 border-orangeStrong">
           <h1 className="font-black uppercase text-6xl md:text-8xl tracking-tight text-orangeMid mb-4 md:mb-0">
             Curious
@@ -45,10 +41,6 @@ function Category() {
             )
           })}
         </div>
-      </div>
-      <div className="flex h-1/6 m-auto w-50">
-        <div className="h-full w-20 box-content bg-tealMid border-r-8 border-tealStrong"></div>
-        <div className="h-full w-20 bg-tealMid"></div>
       </div>
     </>
   )

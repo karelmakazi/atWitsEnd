@@ -5,6 +5,19 @@ import categoryContext from '../context/categoryContext.js'
 import Category from './Category'
 import Quiz from './Quiz'
 
+// TEMP STYLING SOURCE
+// IMAGE BACKGROUND
+const backgroundWrapper = 'relative flex flex-col md:flex-row h-screen w-screen font-spartan select-none'
+const backgroundStripDimensions = 'h-1/5 md:w-1/5 w-screen md:h-screen '
+const backgroundStripColours = ['animals', 'books', 'earth', 'history', 'science']
+
+// QUIZ
+const quizWrapper = 'absolute z-10 h-screen w-screen bg-black bg-opacity-50'
+
+function backgroundCompiler (colour) {
+  return backgroundStripDimensions + ` bg-${colour}`
+}
+
 function App () {
   const [selectedCategory, setSelectedCategory] = React.useState({
     catName: null,
@@ -12,17 +25,23 @@ function App () {
   })
 
   return (
-    <div className="flex flex-col h-screen bg-tealStrong font-spartan select-none">
-      <categoryContext.Provider
-        value={{ selectedCategory, setSelectedCategory }}
-      >
-        <Route exact path="/">
-          <Category setSelectedCategory={setSelectedCategory} />
-        </Route>
-        <Route path="/quiz">
-          <Quiz category={selectedCategory} />
-        </Route>
-      </categoryContext.Provider>
+    <div className={backgroundWrapper}>
+      {backgroundStripColours.map((colour, index) => {
+        const compiledClass = backgroundCompiler(colour)
+        return <div key={index} className={compiledClass}></div>
+      })}
+
+      <div className={quizWrapper}>
+        <categoryContext.Provider
+          value={{ selectedCategory, setSelectedCategory }}>
+          <Route exact path="/">
+            <Category setSelectedCategory={setSelectedCategory} />
+          </Route>
+          <Route path="/quiz">
+            <Quiz category={selectedCategory} />
+          </Route>
+        </categoryContext.Provider>
+      </div>
     </div>
   )
 }
