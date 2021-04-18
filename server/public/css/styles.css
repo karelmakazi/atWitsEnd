@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;600;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
 /*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -12171,6 +12173,10 @@ video {
 
 .font-spartan{
   font-family: Spartan;
+}
+
+.font-squada{
+  font-family: Squada One;
 }
 
 .font-thin{
@@ -44563,6 +44569,10 @@ video {
     font-family: Spartan;
   }
 
+  .sm\:font-squada{
+    font-family: Squada One;
+  }
+
   .sm\:font-thin{
     font-weight: 100;
   }
@@ -76873,6 +76883,10 @@ video {
 
   .md\:font-spartan{
     font-family: Spartan;
+  }
+
+  .md\:font-squada{
+    font-family: Squada One;
   }
 
   .md\:font-thin{
@@ -109187,6 +109201,10 @@ video {
     font-family: Spartan;
   }
 
+  .lg\:font-squada{
+    font-family: Squada One;
+  }
+
   .lg\:font-thin{
     font-weight: 100;
   }
@@ -141499,6 +141517,10 @@ video {
     font-family: Spartan;
   }
 
+  .xl\:font-squada{
+    font-family: Squada One;
+  }
+
   .xl\:font-thin{
     font-weight: 100;
   }
@@ -173809,6 +173831,10 @@ video {
 
   .\32xl\:font-spartan{
     font-family: Spartan;
+  }
+
+  .\32xl\:font-squada{
+    font-family: Squada One;
   }
 
   .\32xl\:font-thin{

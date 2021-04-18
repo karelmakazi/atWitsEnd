@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        spartan: ['Spartan']
+        spartan: ['Spartan'],
+        squada: ['Squada One']
       },
       colors: {
         tealStrong: '#014040',

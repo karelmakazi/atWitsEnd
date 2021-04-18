@@ -7,12 +7,12 @@ import Quiz from './Quiz'
 
 // TEMP STYLING SOURCE
 // IMAGE BACKGROUND
-const backgroundWrapper = 'relative flex flex-col md:flex-row h-screen w-screen font-spartan select-none'
+const backgroundWrapper = 'relative flex flex-col md:flex-row h-screen w-screen font-squada select-none'
 const backgroundStripDimensions = 'h-1/5 md:w-1/5 w-screen md:h-screen '
 const backgroundStripColours = ['animals', 'books', 'earth', 'history', 'science']
 
 // QUIZ
-const quizWrapper = 'absolute z-10 h-screen w-screen bg-black bg-opacity-50'
+const quizWrapper = 'absolute flex z-10 h-screen w-screen bg-black bg-opacity-50'
 
 function backgroundCompiler (colour) {
   return backgroundStripDimensions + ` bg-${colour}`

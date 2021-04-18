@@ -4,13 +4,19 @@ import { Link } from 'react-router-dom'
 import categoryContext from '../context/categoryContext'
 import categoryList from '../data/categoryList'
 
-function Category() {
+// TEMP STYLING
+const quizPanel =
+  'grid grid-cols-4 gap-2 grid-rows-6 justify-center m-auto w-3/4 h-4/6 p-7 rounded-lg border-4 border-orangeMid shadow-lg bg-black '
+
+const headingBlock = 'col-span-full'
+
+function Category () {
   const categorySelection = useContext(categoryContext)
 
   const clickHandler = (selected) => {
     categorySelection.setSelectedCategory({
       catName: selected.catName,
-      catNumber: selected.catNumber,
+      catNumber: selected.catNumber
     })
   }
 
@@ -19,10 +25,10 @@ function Category() {
 
   return (
     <>
-      <div className="flex flex-col my-auto m-auto w-3/4 h-4/6 p-7 rounded-lg border-4 border-orangeMid shadow-lg bg-black ">
+      <div className={quizPanel}>
         <div className="text-center h-2/4  border-b-0 md:border-b-2 border-orangeStrong">
-          <h1 className="font-black uppercase text-6xl md:text-8xl tracking-tight text-orangeMid mb-4 md:mb-0">
-            Curious
+          <h1 className="font-black uppercase text-6xl md:text-8xl text-animals mb-4 md:mb-0">
+            AT WIT's END
           </h1>
           <h3 className=" font-semibold tracking-tight text-xl whitespace-pre md:whitespace-normal md:text-2xl text-orangeLight">
             {greetingText}
