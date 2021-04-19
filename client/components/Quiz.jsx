@@ -4,7 +4,15 @@ import { getQuestions } from '../apis/questions'
 
 import Answer from './Answer'
 
-function Quiz({ category }) {
+// LAYOUT STYLING
+const quizPanel =
+  'grid grid-cols-4 gap-2 grid-rows-6 justify-center m-auto w-3/4 h-5/6 p-7 rounded-lg border-4 border-greenMid shadow-lg bg-black '
+
+const categoryGridBlock = 'bg-blueMid col-span-full row-span-2'
+const questionGridBlock = 'bg-blueMid col-span-full row-span-2'
+const answerGridBlock = 'bg-greenMid col-span-full row-span-2 flex flex-col md:flex-row md:flex-wrap'
+
+function Quiz ({ category }) {
   const [questionList, setQuestionList] = useState('wait')
   const [questionIndex, setQuestionIndex] = useState(0)
   const [answerStatus, setAnswer] = useState(false)
@@ -20,21 +28,25 @@ function Quiz({ category }) {
   }, [questionIndex])
 
   return (
-    <>
-      <div className="quiz-header">
+    <div className={quizPanel}>
+
+      <div className={categoryGridBlock}>
         <h1>{category.catName}</h1>
         <h3>Score: {score}</h3>
       </div>
 
       {questionIndex < 20 && (
-        <div className="quiz-stack">
-          <h3>{questionList[questionIndex].question}</h3>
-          {questionList != 'wait' &&
+        <>
+          <div className={questionGridBlock}>
+            <h3>{questionList[questionIndex].question}</h3>
+          </div>
+
+          <div className={answerGridBlock}>
+            {questionList != 'wait' &&
             questionList[questionIndex].answerArray.map((answer, index) => {
               return (
-                <div className="quiz-stack__answer-hstack">
+                <div key={index} className="quiz-stack__answer-hstack">
                   <Answer
-                    key={index}
                     questionIndex={questionIndex}
                     answer={answer}
                     setQuestionIndex={setQuestionIndex}
@@ -43,7 +55,8 @@ function Quiz({ category }) {
                 </div>
               )
             })}
-        </div>
+          </div>
+        </>
       )}
 
       {questionIndex === 20 && (
@@ -52,7 +65,8 @@ function Quiz({ category }) {
           <Link to={'/'}>Home</Link>
         </div>
       )}
-    </>
+
+    </div>
   )
 }
 

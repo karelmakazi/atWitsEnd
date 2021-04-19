@@ -9,7 +9,7 @@ import Quiz from './Quiz'
 // IMAGE BACKGROUND
 const backgroundWrapper = 'relative flex flex-col md:flex-row h-screen w-screen font-squada select-none'
 const backgroundStripDimensions = 'h-1/5 md:w-1/5 w-screen md:h-screen '
-const backgroundStripColours = ['animals', 'books', 'earth', 'history', 'science']
+const backgroundStripColours = ['blueDark', 'blueMid', 'blueLight', 'greenDark', 'greenMid']
 
 // QUIZ
 const quizWrapper = 'absolute flex z-10 h-screen w-screen bg-black bg-opacity-50'
