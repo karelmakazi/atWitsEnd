@@ -17,7 +17,8 @@ module.exports = {
         blueMid: '#026773',
         blueLight: '#03A6A6',
         greenDark: '#3E5902',
-        greenMid: '#888C03'
+        greenMid: '#888C03',
+        textWhite: '#F3F5F0'
       },
       fontSize: {
         display: ['12rem', { lineHeight: '1' }]
@@ -25,6 +26,10 @@ module.exports = {
       screens: {
         break1: '871px'
       },
+      width: {
+        396: '396px',
+        427: '427px'
+      }
     }
   },
   variants: {

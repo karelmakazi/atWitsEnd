@@ -6,27 +6,28 @@ import categoryList from '../data/categoryList'
 
 // LAYOUT STYLING
 const quizPanel =
-  'grid grid-cols-4 gap-2 grid-rows-6 justify-center m-auto w-3/4 h-5/6 p-7 rounded-lg border-4 border-greenMid shadow-xl bg-black text-center'
-
-const headingGridBlock = 'col-span-full row-span-3 bg-greenDark'
-// const byLineGridBlock = 'col-span-full row-span-1'
+  'grid grid-cols-4 gap-2 auto-rows-max justify-center m-auto w-396 md:w-3/4 h-5/6 p-7 rounded-lg border-4 border-greenMid shadow-xl bg-black text-center'
+const headingGridBlock = 'pb-3 md:pb-7 col-span-full row-span-3'
 const optionsGridBlock =
-  'bg-greenMid col-span-full row-span-3 flex flex-col md:flex-row md:flex-wrap'
+  'col-span-full row-span-3 flex flex-col md:flex-row md:flex-wrap pt-4 border-t-2 border-greenMid'
+
+// ELEMENT STYLING
+const categoryButton =
+  'flex-grow h-14 md:h-24 md:w-2/4 uppercase leading-tight text-4xl text-greenMid transition ease-out duration-500 hover:text-textWhite cursor-pointer select-none focus:outline-none '
 
 // TYPOGRAPHY
 const heading =
   'font-black uppercase text-greenMid text-7xl md:text-8xl lg:text-9xl'
 const byLine =
-  'px-10 md:px-24 lg:px-16  text-2xl md:text-3xl lg:text-4xl leading-snug text-white'
-  // 'px-32 pb-32 text-xl whitespace-pre md:whitespace-normal md:text-4xl text-white'
+  'px-4 md:px-24 lg:px-16  xl:px-44 text-2xl md:text-3xl lg:text-4xl leading-tight md:leading-snug text-textWhite'
 
-function Category() {
+function Category () {
   const categorySelection = useContext(categoryContext)
 
   const clickHandler = (selected) => {
     categorySelection.setSelectedCategory({
       catName: selected.catName,
-      catNumber: selected.catNumber,
+      catNumber: selected.catNumber
     })
   }
 
@@ -37,22 +38,17 @@ function Category() {
     <>
       <div className={quizPanel}>
         <div className={headingGridBlock}>
-          <div className='bg-red-300'>
-
-          <h1 className={heading}>AT WIT's END</h1>
-          <h3 className={byLine}>{greetingText}</h3>
-
+          <div>
+            <h1 className={heading}>AT WIT's END</h1>
+            <h3 className={byLine}>{greetingText}</h3>
           </div>
         </div>
-        {/* <div className={byLineGridBlock}>
-        </div> */}
-
         <div className={optionsGridBlock}>
           {categoryList.map((category, index) => {
             return (
               <button
                 key={index}
-                className="bg-greenDark flex-grow md:w-2/4 font-semibold tracking-tight leading-tight text-lg md:text-xl cursor-pointer hover:text-orangeStrong"
+                className={categoryButton}
                 onClick={() => clickHandler(category)}
               >
                 <Link to={'/quiz'}>{category.catName}</Link>

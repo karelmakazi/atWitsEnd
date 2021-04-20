@@ -1,18 +1,20 @@
 import React from 'react'
 
-function Answer({answer, setAnswer, questionIndex, setQuestionIndex}) {
+// ELEMENT STYLING
+const categoryButton =
+  'flex-grow h-14 md:h-24 md:w-2/4 uppercase leading-tight text-2xl text-greenMid transition ease-out duration-500 hover:text-textWhite cursor-pointer select-none focus:outline-none '
 
-  let processAnswer = () => {
+function Answer ({ answer, setAnswer, questionIndex, setQuestionIndex }) {
+  const processAnswer = () => {
     setAnswer(answer.status)
     setQuestionIndex(questionIndex + 1)
   }
-  
-  return(
-    <div className='answer-hstack__button-card'>
-      <button onClick={()=> processAnswer()}>{answer.answer}</button>
+
+  return (
+    <div>
+      <button className={categoryButton} onClick={() => processAnswer()}>{answer.answer}</button>
     </div>
-    )
+  )
 }
 
 export default Answer
-
