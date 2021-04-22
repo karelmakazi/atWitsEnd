@@ -7,7 +7,7 @@ import Quiz from './Quiz'
 
 // TEMP STYLING SOURCE
 // IMAGE BACKGROUND
-const backgroundWrapper = 'relative flex flex-col md:flex-row h-screen w-full font-squada select-none'
+const backgroundWrapper = 'relative flex flex-col md:flex-row h-screen w-full font-squada select-none overflow-auto'
 const backgroundStripDimensions = 'h-1/5 md:w-1/5 w-full md:h-screen '
 const backgroundStripColours = ['blueDark', 'blueMid', 'blueLight', 'greenDark', 'greenMid']
 

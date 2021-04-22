@@ -6,7 +6,7 @@ import categoryList from '../data/categoryList'
 
 // LAYOUT STYLING
 const quizPanel =
-  'grid grid-cols-4 gap-2 auto-rows-max justify-center m-auto w-396 md:w-3/4 h-5/6 p-7 rounded-lg border-4 border-greenMid shadow-xl bg-black text-center'
+  'grid grid-cols-4 gap-2 auto-rows-max justify-center m-auto h-600 w-396 md:w-3/4 p-7 rounded-lg border-4 border-greenMid shadow-xl bg-black text-center'
 const headingGridBlock = 'pb-3 md:pb-7 col-span-full row-span-3'
 const optionsGridBlock =
   'col-span-full row-span-3 flex flex-col md:flex-row md:flex-wrap pt-4 border-t-2 border-greenMid'
