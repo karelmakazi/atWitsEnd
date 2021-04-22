@@ -1,5 +1,5 @@
 import request from 'superagent'
-import cleanQuestions from '../library/formatQuiz'
+import { cleanQuestions } from '../library/formatQuiz'
 
 
 export function getQuestions (category) {

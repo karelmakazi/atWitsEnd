@@ -1,0 +1,15 @@
+body {
+  background-color: beige;
+  padding: 0 8vw 0 8vw;
+}
+
+.wrapper {
+  background-color: rgb(124, 88, 58);
+  height: 100vh;
+  padding: 0 4vw 0 4vw;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
