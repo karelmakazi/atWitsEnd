@@ -12,7 +12,7 @@ const categoryGridBlock =
   'col-span-full row-span-3 pb-2 md:pb-4 border-b-2 border-greenMid'
 
 const questionGridBlock =
-  'col-span-full row-span-2 py-10 border-b-2 border-greenMid'
+  'col-span-full row-span-2 pt-7 pb-10 border-b-2 border-greenMid'
 const answerGridBlock = 'col-span-full row-span-2 flex flex-col'
 
 // TYPOGRAPHY
