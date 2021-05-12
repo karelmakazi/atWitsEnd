@@ -48,7 +48,7 @@
     "express": "^4.17.1",
     "knex": "^0.21.12",
     "pg": "^8.5.1",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.10",
     "superagent": "^6.1.0",
     "tailwindcss": "^2.0.3"
   },
